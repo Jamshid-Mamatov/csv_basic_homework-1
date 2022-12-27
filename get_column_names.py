@@ -9,7 +9,7 @@ def get_column_names(data):
     """
     list_data=data.split('\n')
     
-    return list_data[1].split(',')
+    return list_data[0].split(',')
 
 # Read the csv file
 
