@@ -1,17 +1,18 @@
 #Define function,Get coloumn names from a csv file
-def find_number_of_columns(data):
-    """
-    Find the number of columns in CSV.
-    Args:
-        data(str): csv file.
-    Return:
-        int: Number of columns.
+def get_column_names(data):
+    """ 
+    Get column names from a csv file
+    Parameters:
+        data(str): csv file
+    Returns:
+        column_names: list of column names
     """
     list_data=data.split('\n')
-   
-    return list_data[0].split(',')
+    
+    return list_data[1].split(',')
+
 # Read the csv file
 
 with open('data.csv','r') as f:
     fr=f.read()
-    find_number_of_columns(data=fr)
+    get_column_names(data=fr)
